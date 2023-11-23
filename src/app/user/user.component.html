@@ -1,0 +1,12 @@
+<h2>Users of a bank</h2>
+
+<ul class="user">
+    <li *ngFor="let user of users">
+      <a routerLink="{{ user.id }}">
+        <span class="badge"> id :{{ user.id }} </span>
+        Nome Utente: {{ user.nomeUtente }}
+        <br>
+        Id banca: {{ user.idBanca }}
+      </a>
+    </li>
+</ul>

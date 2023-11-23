@@ -1,0 +1,17 @@
+<div *ngIf="function">
+    <h2>{{function.nome | uppercase}} Details</h2>
+    <div>id: {{function.id}}</div>
+    <div>
+        <label for="function-name">function name:</label>
+        <input id="function-name" [(ngModel)]="function.nome" placeholder="name">
+    </div>    
+    <!-- <ul>
+        <li *ngFor="let bank of banks">
+            <a routerLink="{{border}}">
+                <span class="badge">{{border}}</span>
+            </a>
+        </li>
+    </ul> -->
+</div>
+<button type="button" (click)="goBack()">go back</button>
+

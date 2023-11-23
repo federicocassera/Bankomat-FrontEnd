@@ -1,0 +1,10 @@
+<h2>My Banks</h2>
+
+<ul class="bank">
+  <li *ngFor="let bank of banks">
+    <a routerLink="detail/{{bank.id}}">
+      <span class="badge">{{bank.id}} </span>
+      {{bank.nome}}
+    </a>
+  </li>
+</ul>

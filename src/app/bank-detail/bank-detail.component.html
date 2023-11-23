@@ -1,0 +1,52 @@
+<div *ngIf="bank">
+    <h2>{{bank.nome | uppercase}} Details</h2>
+    <div>id: {{bank.id}}</div>
+    <div>
+        <label for="bank-name">bank name:</label>
+        <input id="bank-name" [(ngModel)]="bank.nome" placeholder="name">
+        
+        <br>  
+        <h3>Utenti banca: </h3>      
+        <ul>
+            <li *ngFor="let user of users">                
+                <label for="users">user: {{user.nomeUtente}}</label>
+                <br>
+                modifica nome utente: <br>
+                <input id="users" [(ngModel)]="user.nomeUtente" placeholder="name">
+                <br>
+                <label for="users">password: {{user.password}}</label>
+                <br>
+                modifica password utente: <br>
+                <input id="users" [(ngModel)]="user.password" placeholder="name">
+                <br>
+                <label for="users">bloccato: {{user.bloccato}}</label>
+                <br>
+                modifica stato utente: <br>
+                <input id="users" [(ngModel)]="user.bloccato" placeholder="name">
+                <br>
+                <br>
+                <button type="button" class="update"
+                    (click)="updateUser(user)">Save Changes</button>
+            </li>
+        </ul>
+
+        <br>
+        <h3>Funzionalità banca: </h3>        
+        <ul class="users">
+            <li *ngFor="let func of funcs">                
+                <label for="functions">function: {{func.nome}}</label>
+                <br>
+                modifica nome funzionalità: <br>
+                <input id="functions" [(ngModel)]="func.nome" placeholder="name">
+            </li>
+        </ul>
+    </div>    
+    <!-- <ul>
+        <li *ngFor="let bank of banks">
+            <a routerLink="{{border}}">
+                <span class="badge">{{border}}</span>
+            </a>
+        </li>
+    </ul> -->
+</div>
+<button type="button" (click)="goBack()">go back</button>

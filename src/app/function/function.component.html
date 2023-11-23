@@ -1,0 +1,11 @@
+<h2>Functions of a bank</h2>
+
+<ul class="function">
+  <li *ngFor="let function of funcs">
+    <a routerLink="detail/{{function.id}}">
+      <span class="badge">{{function.id}} </span>
+      {{function.nome}}
+    </a>
+  </li>
+</ul>
+

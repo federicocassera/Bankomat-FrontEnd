@@ -1,0 +1,16 @@
+<div *ngIf="user">
+    <h2>{{user.nomeUtente | uppercase}} Details</h2>
+    <div>id: {{user.id}}</div>
+    <div>
+        <label for="user-name">user name:</label>
+        <input id="user-name" [(ngModel)]="user.nomeUtente" placeholder="name">
+    </div>    
+    <!-- <ul>
+        <li *ngFor="let bank of banks">
+            <a routerLink="{{border}}">
+                <span class="badge">{{border}}</span>
+            </a>
+        </li>
+    </ul> -->
+</div>
+<button type="button" (click)="goBack()">go back</button>

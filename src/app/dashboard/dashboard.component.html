@@ -1,0 +1,8 @@
+<h2>Banche Preferite</h2>
+<div class="banks-menu">
+    <a *ngFor="let bank of banks"
+        routerLink="detail/{{bank.id}}">
+        {{bank.nome}}
+    </a>
+</div>
+
